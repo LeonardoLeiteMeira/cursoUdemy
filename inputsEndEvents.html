@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Inputs&Eventos</title>
+
+	<script type="text/javascript">
+		
+		function incrementa(){
+			document.getElementById('valor').value += 10;
+		}
+
+		function decrementa(){
+			document.getElementById('valor').value -= 10;
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<form method="GET" action="#">
+		<fieldset>
+			<legend>Algumas informações</legend>
+			<label for="comidas">Escolha uma comida:</label>
+			<br>
+			<input type="text" name="Opções de comida" list="listaComidas" id="comidas" >
+
+			<datalist id="listaComidas">
+				<option>Arroz</option>
+				<option>Feijão</option>
+				<option>Lasanha</option>
+				<option>Macarrão</option>
+			</datalist>
+
+			<br>
+
+			<label for="maisComida">Escolha outra</label><br>
+			<select id="maisComida" >
+				<option>Sorvete</option>
+				<option>Pão</option>
+				<option>Frango</option>
+				<option>Batata Frita</option>
+			</select>
+
+			<br>
+
+			<br><br><br>
+
+			<progress value="50" max="100" id="valor"></progress>
+
+			<h1 onmouseover="incrementa()" onmouseout="decrementa()">Teste de evento aqui: passe o mouse</h1>
+			<button onclick="incrementa()">Incrementa</button>
+			<button onclick="decrementa()">Decrementa</button>
+
+			<br><br><br>
+
+			<label>Como é sua dieta?</label>
+			<div>
+				<input type="radio" name="dieta" id="carnivoro" value="Carnivoro"><label for="carnivoro" required>Carnivoro</label>
+				<input type="radio" name="dieta" id="vegano" value="Carnivoro"><label for="vegano">Vegano</label>
+				<input type="radio" name="dieta" id="vegetariano" value="Carnivoro"><label for="vegetariano">Vegetariano</label>
+			</div>
+		
+			<br>
+
+			<p><input type="reset" value="Reset"> <input type="submit" value="Send"></p>
+		</fieldset>
+	</form>
+
+</body>
+</html>
